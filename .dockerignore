@@ -1,0 +1,15 @@
+.git
+.github
+.next
+.venv
+node_modules
+data
+artifacts
+test-results
+playwright-report
+.env*
+!.env.example
+__pycache__
+*.pyc
+*.tsbuildinfo
+backups
