@@ -40,6 +40,8 @@ npm run dev
 
 O dashboard atende na porta **3000** e a API na **8000**. O OpenAPI está em `/docs` da API no modo local; `/health` confirma conectividade do banco. Para build otimizado: `npm run build && npm run start`.
 
+Depois da instalação, os dois serviços também podem ser iniciados juntos com `bash scripts/start_local.sh`. Para operar o MVP sem mensalidade, siga o [guia de operação a custo zero](docs/operacao-custo-zero.md).
+
 O banco local é `data/umconto.db`, ignorado pelo Git. A primeira execução cria somente a empresa e as configurações dos agentes; não semeia concorrentes, métricas ou clientes fictícios. Os testes usam bancos separados e fontes sintéticas identificadas. Processos precisam ser iniciados novamente ao abrir outra máquina; não se presume que sobrevivam à publicação do ambiente.
 
 ### Preservar código e banco
