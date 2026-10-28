@@ -29,6 +29,12 @@ bash scripts/start_local.sh
 
 Abra a porta 3000 no mesmo computador. Encerre com `Ctrl+C`. O banco continua em `data/umconto.db` depois do encerramento ou reinício.
 
+## Visualização pelo navegador, sem instalação
+
+O repositório inclui uma configuração privada para GitHub Codespaces. Abra a branch `work` em um Codespace; a instalação é automática e a porta **Painel Um Conto** é aberta no navegador. O primeiro início pode levar alguns minutos.
+
+Codespaces usa a franquia mensal da conta GitHub. Antes de criar o ambiente, mantenha o limite de gastos do GitHub em zero para impedir cobrança. Pare ou exclua o Codespace quando terminar. O banco desse ambiente fica no Codespace e deve ser exportado antes de excluí-lo.
+
 ## Rotina semanal de crescimento
 
 1. Segunda-feira: executar o Radar e revisar as fontes; descartar resultados sem relação clara com a marca.

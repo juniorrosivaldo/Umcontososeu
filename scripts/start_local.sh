@@ -9,6 +9,7 @@ if [[ ! -x .venv/bin/python || ! -d node_modules ]]; then
 fi
 
 mkdir -p data
+app_host="${APP_HOST:-127.0.0.1}"
 
 cleanup() {
   trap - INT TERM EXIT
@@ -17,9 +18,9 @@ cleanup() {
 }
 trap cleanup INT TERM EXIT
 
-.venv/bin/python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 &
+.venv/bin/python -m uvicorn backend.app.main:app --host "$app_host" --port 8000 &
 api_pid=$!
-npm run dev -- --hostname 127.0.0.1 &
+npm run dev -- --hostname "$app_host" &
 web_pid=$!
 
 printf '%s\n' 'Painel iniciado na porta 3000. Pressione Ctrl+C para encerrar.'
